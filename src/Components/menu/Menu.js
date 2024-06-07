@@ -14,7 +14,7 @@ export default function Menu() {
     <div className="flex flex-wrap">
       <div className="w-full">
         <nav className="relative flex flex-wrap items-center justify-between border-b-1 border-black border-opacity-[20%] transition-all">
-          <div className="w-full max-w-[1350px] px-[67px] mx-auto flex flex-wrap items-center justify-between py-[13px] ">
+          <div className="w-full px-[67px] mx-auto flex flex-wrap items-center justify-between py-[13px] ">
             <div className="w-full relative flex justify-between items-center lg:w-auto px-4 lg:static lg:block lg:justify-start">
               <Link
                 className="text-sm font-bold leading-relaxed inline-block whitespace-nowrap uppercase text-white"
