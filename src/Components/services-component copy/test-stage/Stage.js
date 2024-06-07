@@ -23,7 +23,7 @@ const Stage = ({stageData, elementColor}) => {
     return (
       <div key={i} className='w-[100%] py-[16px] px-[58px] mb-5'>
       <h2 className='text-34/48 text-[#3CBCC3] font-bold pb-5 border-b-2 border-[#3CBCC3]' style={{color: elementColor, borderColor: elementColor}}>{item.No}</h2>
-      <Image src={item.img} className='my-5' />
+      <Image src={item.img} alt='' className='my-5' />
       <h3 className='text-24/34 font-[700] text-[#3CBCC3]' style={{color: elementColor}}>{item.title}</h3>
       <p className='text-16/22 font-[400] text-[#000000]'>{item.desc}</p>
     </div>

@@ -21,7 +21,7 @@ const Benefit = ({cardData}) => {
  const card = cardData.map((card, i) => {
     return (
       <div key={i} className="b-card w-[230px] flex flex-col justify-center items-center gap-5">
-      <Image src={card.img} />
+      <Image src={card.img} alt='' />
       <p className='text-16/22 text-[#000000] font-normal text-center'>{card.desc}</p>
     </div>
     )

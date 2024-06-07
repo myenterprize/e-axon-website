@@ -86,7 +86,7 @@ export default function Menu() {
                 <li className="nav-item">
                   <Link
                     className="text-18/25 text-black font-medium"
-                    href="/about"
+                    href="/who-we-are"
                   >
                     Who We Are
                   </Link>
