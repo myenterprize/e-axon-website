@@ -5,7 +5,7 @@ import Image from 'next/image'
 const HeroSection = ({heroImage, aboutText, industry, companySize, Year}) => {
   return (
     <div className='w-full max-w-[813px] h-[436px] mt-[22px] mb-[176px] bg-black relative'>
-      <Image src={heroImage} style={{width: "100%"}}/>
+      <Image src={heroImage} alt='' style={{width: "100%"}}/>
       <div className="company-details w-[403px] h-[124px] bg-[#F0FBFA] text-center border-1 border-[#0B3E6685] rounded-15 text-[#0B3E66] absolute bottom-[-30px] left-[-92px] drop-shadow-lg">
         <table className='w-full h-full'>
           <tbody>

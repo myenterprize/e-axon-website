@@ -78,6 +78,7 @@ module.exports = {
         'gray-16': '#c5c5c5;',
         'gray-17': '#888888;',
         'orange-2': '#ffae39',
+        // e-axon 'blue-color': '#0B3E66',
       },
       borderRadius: {
         25: '1.563rem',

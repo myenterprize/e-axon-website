@@ -1,3 +1,4 @@
+import React from 'react'
 import Menu from '@/Components/menu/Menu'
 import Benefit from '@/Components/services-component/benefit-section/Benefit'
 import ServiceBanner from '@/Components/services-component/service-banner/ServiceBanner'
@@ -6,11 +7,10 @@ import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/service-banner.jpg"
 import PlanningImg from '@/assets/svgs/planning-svg.svg'
+import TestingProcess from '@/assets/svgs/testing-process.svg'
 import TestImg from '@/assets/svgs/test-svg.svg'
-import MarketingImg from '@/assets/svgs/marketing-svg.svg'
-import EyeImg from '@/assets/svgs/Eye-svg.svg'
-import TargetImg from '@/assets/svgs/target-svg.svg'
-import React from 'react'
+import ManualEffort from '@/assets/svgs/manual-effort.svg'
+import SoftwareQuality from '@/assets/svgs/software-quality.svg'
 import ResultSection from '@/Components/services-component/result-section/ResultSection'
 
 
@@ -33,16 +33,16 @@ const page = () => {
   ]
   const cardData = [
     {
-      img: MarketingImg,
-      desc: "Higher engagement and customer satisfaction."
+      img: TestingProcess,
+      desc: "Consistent and repeatable testing processes."
     },
     {
-      img: EyeImg,
-      desc: "Increased brand visibility and accessibility."
+      img: ManualEffort,
+      desc: "Reduced manual effort and lower costs."
     },
     {
-      img: TargetImg,
-      desc: "Direct marketing channel to users."
+      img: SoftwareQuality,
+      desc: "Faster time to market with improved software quality."
     }
   ]
 
@@ -59,7 +59,7 @@ const page = () => {
         <div className="benefit-section w-full pt-16 flex justify-center items-center">
           <Benefit cardData={cardData}/>
         </div>
-        <div className="results w-full">
+        <div className="results w-full flex justify-end items-center">
           <ResultSection/>
         </div>
       </div>

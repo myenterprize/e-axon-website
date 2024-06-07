@@ -59,7 +59,7 @@ const Skills = () => {
           <br/>
          </div>
       </div>
-      <Image src={VerticalLine}/>
+      <Image src={VerticalLine} alt=''/>
       <div className="skill w-[40%]">
         <h3 className='text-24/34 font-semibold text-[#0B3E66] pb-8 border-b-2 border-[#0B3E66]'>What we did</h3>
         <ul className='skill-list mt-8'>
