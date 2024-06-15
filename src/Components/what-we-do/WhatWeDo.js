@@ -64,7 +64,7 @@ export default function WhatWeDo() {
             {item.itemObject.map((item, index) => (
               <div key={index} className="w-full md:w-[471px] p-[14px]">
                 <div className="pb-[15px] border-b-2 border-[#3CBCC3] border-opacity-[87%] mb-[15px]"><Image src={item.icon} alt="Quality Assurance Testing & Automation" /></div>
-                <div class="text-24/34 text-black font-[700] p-[8px] mb-[15px]">{item.title}</div>
+                <div className="text-24/34 text-black font-[700] p-[8px] mb-[15px]">{item.title}</div>
                 <div className="text-16/22 text-black p-[8px]">{item.desc}</div>
               </div>
             ))}

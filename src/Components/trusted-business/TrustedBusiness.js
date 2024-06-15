@@ -12,13 +12,13 @@ export default function TrustedBusiness() {
     <div className="flex">
       <div className="w-full xl:flex-row flex-col max-w-full xl:pl-[180px] ml-auto flex items-center justify-between pb-[176px]">
           <div className="flex flex-col max-w-[505px]">
-            <div className="text-18/25 text-black font-normal xl:mb-0 mb-[14px]">We are the trusted choice of  many businesses</div>
+            <div className="md:text-18/25 text-12/17 text-black font-normal xl:mb-0 mb-[14px]">We are the trusted choice of  many businesses</div>
           </div>
-          <div className="flex items-center xl:w-[55%] gap-x-[74px] bg-P2-50 border-l-[3px] border-[#075085] h-[104px] xl:pl-[55px] xl:pr-[80px] pl-4 pr-y w-full justify-center">
-            <Link href={"/thefa"}><Image src={faLogo} alt="fa" /></Link>
-            <Link href={"/convera"}><Image src={convera} alt="convera" /></Link>
-            <Link href={"/rakuten"}><Image src={rakuten} alt="rakuten" /></Link>
-            <Link href={"/edge"}><Image src={edge} alt="edge" /></Link>
+          <div className="flex items-center xl:w-[55%] md:gap-x-[74px] gap-x-[19px] bg-P2-50 md:border-l-[3px] border-[#075085] md:h-[104px] h-[52px] xl:pl-[55px] xl:pr-[80px] md:pl-4 md:pr-0 px-[32px] w-full justify-center">
+            <Link href={"/thefa"}><Image className="md:w-auto w-[25px]" src={faLogo} alt="fa" /></Link>
+            <Link href={"/convera"}><Image className="md:w-auto w-[80px]" src={convera} alt="convera" /></Link>
+            <Link href={"/rakuten"}><Image className="md:w-auto w-[72px]" src={rakuten} alt="rakuten" /></Link>
+            <Link href={"/edge"}><Image className="md:w-auto w-[62px]" src={edge} alt="edge" /></Link>
           </div>
       </div>
     </div>

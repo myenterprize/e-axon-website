@@ -36,7 +36,7 @@ const Skills = () => {
  const serviceItem = services.map((elem, i) => {
     return (
       <li key={i} className='mb-[19px]'>
-        <div className='flex justify-start items-center gap-9 text-18/25 font-bold text-[#075085]'>
+        <div className='flex justify-start items-center gap-9 text-14/18 font-semibold md:text-18/25 md:font-bold text-blue-color'>
           <h3>{elem.icon}</h3>
           <h3>{elem.title}</h3>
         </div>
@@ -45,10 +45,10 @@ const Skills = () => {
   })
 
   return (
-    <div className='w-[1062px] h-[480px] flex justify-between items-center p-3 my-20'>
-      <div className="chellange w-[40%]">
-        <h3 className='text-24/34 font-semibold text-[#0B3E66] pb-8 border-b-2 border-[#0B3E66]'>Challenge</h3>
-         <div className="list mt-8 text-18/25 font-normal">
+    <div className='w-full h-auto lg:max-w-[1062px] flex flex-col lg:flex-row justify-between items-center px-[15px] md:px-20 lg:px-[15px] lg:p-3 my-20'>
+      <div className="chellange w-full lg:w-[40%]">
+        <h3 className='text-16/22 md:text-24/34 font-semibold text-blue-color pb-[8px] lg:pb-8 border-b-2 border-blue-150'>Challenge</h3>
+         <div className="list mt-8 text-12/15 md:text-18/25 font-normal">
          <p>• Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
          <br/>
           <p>• sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -59,10 +59,10 @@ const Skills = () => {
           <br/>
          </div>
       </div>
-      <Image src={VerticalLine} alt=''/>
-      <div className="skill w-[40%]">
-        <h3 className='text-24/34 font-semibold text-[#0B3E66] pb-8 border-b-2 border-[#0B3E66]'>What we did</h3>
-        <ul className='skill-list mt-8'>
+      <Image className='hidden lg:block' src={VerticalLine} alt='Vertical line'/>
+      <div className="skill w-full mt-10 md:mt-0 lg:w-[40%]">
+        <h3 className='text-16/22 md:text-24/34 font-semibold text-blue-color pb-[8px] lg:pb-8 border-b-2 border-blue-150'>What we did</h3>
+        <ul className='skill-list mt-8 md:grid md:grid-cols-2 md:items-center lg:block'>
           {serviceItem}
         </ul>
       </div>

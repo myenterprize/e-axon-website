@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Rating = ({ratingWidth, percentage, text, lineColor, ratingBorder, percentageColor}) => {
+const Rating = ({ratingWidth, percentage, text, lineColor, ratingBorder, classes}) => {
   return (
-    <div className="item w-[100%] flex justify-start items-center relative mb-[120px] py-2 border-s-8 pl-[18px] border-[#3CBCC3] right-0" style={{width: ratingWidth, border: ratingBorder}}>
-    <h1 className='z-20 bg-white text-47/62 font-bold text-[#EBA63F]' style={{color: percentageColor}}>{percentage}%</h1>
-    <p className='px-[17px] z-20 bg-white text-18/25 font-semibold'>{text}</p>
-    <div className="horizontal-line w-full border-[2px] border-[#EBA63F] float-end absolute z-10" style={{borderColor: lineColor}}>
+    <div className="item w-full flex flex-col md:flex-row justify-start items-center relative mb-0 md:mb-[120px] py-2 border-l-0 md:border-s-8 pl-[12px] md:pl-[18px] border-green-color right-0" style={{width: ratingWidth, borderColor: ratingBorder}}>
+    <h1 className={`z-20 bg-white text-34/48 md:text-47/62 font-bold text-yellow-color ${classes}`} style={{color: lineColor}}>{percentage}%</h1>
+    <p className={`p-0 md:px-[17px] z-20 bg-white text-12/15 md:text-18/25 font-semibold ${classes}`}>{text}</p>
+    <div className="horizontal-line w-full border-[2px] border-yellow-color float-end hidden md:block absolute z-10" style={{borderColor: lineColor}}>
     </div>
   </div>
   )

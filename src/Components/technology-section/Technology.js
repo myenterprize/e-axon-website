@@ -8,12 +8,12 @@ import ReactJsLogo from '@/assets/svgs/React-JS.svg'
 
 const Technology = () => {
   return (
-    <div className='w-[500px] h-[80px] flex justify-start items-center gap-5'>
-      <Image src={AWSLogo} style={{width:"67px", height:"80px"}} alt=''/>
-      <Image src={HTMLLogo} style={{width:"67px", height:"80px"}} alt=''/>
-      <Image src={JavaScriptLogo} style={{width:"67px", height:"80px"}} alt=''/>
-      <Image src={JSLogo} style={{width:"67px", height:"80px"}} alt=''/>
-      <Image src={ReactJsLogo} style={{width:"67px", height:"80px"}} alt=''/>
+    <div className='w-full h-auto lg:w-[500px] lg:h-[80px] flex justify-center lg:justify-start items-center gap-x-[20px] lg:gap-5'>
+      <Image className='w-[40px] h-[40px] md:w-[60px]  md:h-[70px]  lg:w-[67px] lg:h-[80px]' src={AWSLogo} alt='AWS logo'/>
+      <Image className='w-[40px] h-[40px] md:w-[60px]  md:h-[70px]  lg:w-[67px] lg:h-[80px]' src={HTMLLogo} alt='HTML logo'/>
+      <Image className='w-[40px] h-[40px] md:w-[60px]  md:h-[70px]  lg:w-[67px] lg:h-[80px]' src={JavaScriptLogo} alt='JavaScript logo'/>
+      <Image className='w-[40px] h-[40px] md:w-[60px]  md:h-[70px]  lg:w-[67px] lg:h-[80px]' src={JSLogo} alt='JS logo'/>
+      <Image className='w-[40px] h-[40px] md:w-[60px]  md:h-[70px]  lg:w-[67px] lg:h-[80px]' src={ReactJsLogo} alt='React JS logo'/>
     </div>
   )
 }
