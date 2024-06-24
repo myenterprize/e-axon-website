@@ -11,7 +11,7 @@ export default function CounterSection() {
     <div className="flex mb-[263px]">
       <div className="w-full max-w-[1190px] mx-auto flex items-center justify-between">
           <div className="flex xl:flex-row flex-col justify-center gap-x-[74px] w-full items-start">
-            <div className="flex xl:w-[50%] w-full count-mob">
+            <div className="flex xl:w-[50%] w-full">
               <div className="pl-[22px] pt-[8px] flex flex-row xl:w-[50%] w-full">
                 <div className="border-l-1 border-dashed border-[#075085] relative"><div className="w-[4px] h-[80px] rounded-full bg-[#075085] absolute -left-[2px] top-0"/></div>
                 <div className="xl:h-[280px] pl-[14px]">
@@ -28,7 +28,7 @@ export default function CounterSection() {
               </div>
             </div>
             
-            <div className="flex xl:w-[50%] w-full count-mob">
+            <div className="flex xl:w-[50%] w-full">
               <div className="pl-[22px] pt-[8px] flex flex-row w-[50%]">
                 <div className="border-l-1 border-dashed border-[#075085] relative"><div className="w-[4px] h-[80px] rounded-full bg-[#075085] absolute -left-[2px] top-0"/></div>
                 <div className="xl:h-[280px] pl-[14px]">
