@@ -49,6 +49,7 @@ module.exports = {
         // e-axon
         'P2-900': '#0B3E66',
         'S1-400': '#3CBCC3',
+        'S1-500': '#3CBCC3BD',
         'P2-50': '#F0F8FF',
         'F9-10': '#F9F9F9',
         'P1-50': '#F4F6FA',
@@ -78,7 +79,11 @@ module.exports = {
         'gray-16': '#c5c5c5;',
         'gray-17': '#888888;',
         'orange-2': '#ffae39',
-        // e-axon 'blue-color': '#0B3E66',
+        // e-axon 
+        'blue-150': '#0B3E66',
+        'green-color': '#3CBCC3',
+        'yellow-color': '#EBA63F'
+         // e-axon 
       },
       borderRadius: {
         25: '1.563rem',
@@ -95,6 +100,9 @@ module.exports = {
         2: '2px',
       },
       boxShadow: {
+        // e-axon
+        xs10: '0px 4px 6.4px 0px rgba(0, 0, 0, 0.21)',
+        // e-axon
         xs1: '1px 1px 4px rgba(0, 0, 0, 0.16)',
         xs2: '0px 3px 6px rgba(0, 0, 0, 0.16)',
         xs3: '0px 5px 15px #e3e3e347',
@@ -110,15 +118,20 @@ module.exports = {
       },
       fontSize: {
         // e-axon
+        '9/12': ['10px', '12.24px'],
         '12/15': ['12px', '15.84px'],
-        '12/17': ['12px', '17.04px'],
         '14/18': ['14px', '18.48px'],
         '16/22': ['16px', '22.72px'],
         '18/25': ['18px', '25.56px'],
         '24/34': ['24px', '34.08px'],
         '34/48': ['34px', '48.28px'],
         '47/62': ['47px', '62.04px'],
-        '24/32.4': ['24px', '32.4px'],
+        '31/45': ['31px', '45.04px'],
+        //mobile responsive
+        '28/39': ['28px', '39.76px'],
+        '12/17': ['12px', '17.04px'],
+        '20/28': ['20px', '28.4px'],
+        '10/13': ['10px', '13.2px'],
         // e-axon
         '3xl': ['80px', '80px'],
         xxl: ['57px', '25px'],
@@ -393,7 +406,7 @@ module.exports = {
       },
       screens: {
         '2xs': '300',
-        xs: '400px',
+        xs: '300px',
         sm: '640px',
         md: '768px',
         lg: '1024px',
