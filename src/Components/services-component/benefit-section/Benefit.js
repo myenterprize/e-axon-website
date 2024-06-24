@@ -1,41 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 
+const Benefit = ({ cardData, cardWidth }) => {
 
-const Benefit = ({cardData}) => {
-  // const cardData = [
-  //   {
-  //     img: MarketingImg,
-  //     desc: "Higher engagement and customer satisfaction."
-  //   },
-  //   {
-  //     img: EyeImg,
-  //     desc: "Increased brand visibility and accessibility."
-  //   },
-  //   {
-  //     img: TargetImg,
-  //     desc: "Direct marketing channel to users."
-  //   }
-  // ]
-
- const card = cardData.map((card, i) => {
+  const card = cardData.map((card, i) => {
     return (
-      <div key={i} className="b-card w-[230px] flex flex-col justify-center items-center gap-5">
-      <Image src={card.img} alt='' />
-      <p className='text-16/22 text-[#000000] font-normal text-center'>{card.desc}</p>
-    </div>
+      <div key={i} className="b-card w-[230px] flex flex-col justify-center items-center gap-5" style={{width: cardWidth}}>
+        <Image src={card.img} alt='Benefit section image' />
+        <p className='text-lg font-bold text-black'>{card.title}</p>
+        <p className='text-sm md:text-base text-black font-normal text-center'>{card.desc}</p>
+      </div>
     )
   })
 
   return (
-    <div className='w-[858px] h-[353px]'>
-      <h3 className='text-center text-24/34 text-[#000000] font-bold mb-16'>Benefits of Our Service</h3>
-      <div className="benefit-cards w-full flex justify-between items-center px-8">
-        {/* <div className="b-card w-[210px] flex flex-col justify-center items-center gap-5">
-          <Image src={MarketingImg} />
-          <p className='text-16/22 text-[#000000] font-normal text-center'>Higher engagement
-            and customer satisfaction.</p>
-        </div> */}
+    <div className='w-full max-w-[1000px] mb-[100px]'>
+      <h3 className='text-center text-lg md:text-xl text-black font-bold mb-[90px]'>Benefits of Our Service</h3>
+      <div className="benefit-cards w-full flex flex-wrap justify-center gap-[113px]">
         {card}
       </div>
     </div>
@@ -43,3 +24,4 @@ const Benefit = ({cardData}) => {
 }
 
 export default Benefit
+

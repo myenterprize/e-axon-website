@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const AboutImage = ({aboutHero}) => {
   return (
-    <div className='w-full max-w-[1200px] h-[466px]'>
-      <Image src={aboutHero}/>
+    <div className='pt-[33px] px-[13px] w-full sm:pt-[55px] sm:mx-2  lg:max-w-[1200px] md:h-[506px]'>
+      <Image className='w-full h-full object-cover object-center' src={aboutHero} alt='about hero image'/>
     </div>
   )
 }

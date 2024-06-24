@@ -1,10 +1,10 @@
 import React from 'react'
 
-const AboutTitle = ({width, title, desc, fontSize,color, padding, span}) => {
+const AboutTitle = ({title, desc,classes, span, workClasses}) => {
   return (
-    <div className='w-[750px] px-5 py-[63px] text-center' style={{width: width,padding: padding}}>
-      <h1 className='text-47/62 font-extrabold text-[#0B3E66] mb-[19px]' style={{fontSize: fontSize, color: color}}>{title}</h1>
-      <p className='text-18/25 text-[#0B3E66] font-medium'>{desc} <span className='text-[#3CBCC3]'>{span}</span>
+    <div className={`px-[32px] md:max-w-[750px] pt-[16.5px] sm:pt-[35px] lg:pt-[71px] text-center`}>
+      <h1 className={` mb-[11px]  text-blue-color md:mb-[19px] ${classes} ${workClasses}`}>{title}</h1>
+      <p className={`text-12/17 sm:text-14/18 md:text-18/25 text-blue-color font-medium`}>{desc} <span className='text-green-color'>{span}</span>
 </p>
     </div>
   )
