@@ -1,22 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 
+const Benefit = ({ cardData, cardWidth }) => {
 
-const Benefit = ({cardData}) => {
-
- const card = cardData.map((card, i) => {
+  const card = cardData.map((card, i) => {
     return (
-      <div key={i} className="b-card w-[250px] flex flex-col justify-center items-center gap-5">
-      <Image src={card.img} alt='Benefit section image' />
-      <p className='text-12/15 md:text-16/22 text-black font-normal text-center'>{card.desc}</p>
-    </div>
+      <div key={i} className="b-card w-[230px] flex flex-col justify-center items-center gap-5" style={{width: cardWidth}}>
+        <Image src={card.img} alt='Benefit section image' />
+        <p className='text-lg font-bold text-black'>{card.title}</p>
+        <p className='text-sm md:text-base text-black font-normal text-center'>{card.desc}</p>
+      </div>
     )
   })
 
   return (
-    <div className='w-full max-w-[858px]'>
-      <h3 className='text-center text-16/22 md:text-24/34 text-black font-bold mb-16'>Benefits of Our Service</h3>
-      <div className="benefit-cards w-full flex flex-col md:flex-row justify-between items-center px-8 gap-[50px] lg:gap-0">
+    <div className='w-full max-w-[1000px] mb-[100px]'>
+      <h3 className='text-center text-lg md:text-xl text-black font-bold mb-[90px]'>Benefits of Our Service</h3>
+      <div className="benefit-cards w-full flex flex-wrap justify-center gap-[113px]">
         {card}
       </div>
     </div>
@@ -24,3 +24,4 @@ const Benefit = ({cardData}) => {
 }
 
 export default Benefit
+

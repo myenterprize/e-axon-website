@@ -7,6 +7,10 @@ import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/mobile-banner.jpg"
 import PlanningImg from '@/assets/svgs/discover-planning.svg'
+import Development from '@/assets/svgs/m-development.svg'
+import MTesting from '@/assets/svgs/m-testing.svg'
+import CodeDevelopment from '@/assets/svgs/code-development.svg'
+import Updates from '@/assets/svgs/updates-maintaince.svg'
 import TestingProcess from '@/assets/svgs/marketing-svg.svg'
 import TestImg from '@/assets/svgs/design-experience.svg'
 import ManualEffort from '@/assets/svgs/Eye-svg.svg'
@@ -31,7 +35,35 @@ const page = () => {
       title: "Design and User Experience",
       desc: "To create engaging and intuitive interfaces."
 
-    }
+    },
+    {
+      No: "03",
+      img: Development,
+      title: "Development",
+      desc: "Code applications for multiple platforms."
+
+    },
+    {
+      No: "04",
+      img: MTesting,
+      title: "Testing",
+      desc: "Ensure functionality and performance on all devices."
+
+    },
+    {
+      No: "05",
+      img: CodeDevelopment,
+      title: "Deployment",
+      desc: "Launch apps in relevant app stores."
+
+    },
+    {
+      No: "06",
+      img: Updates,
+      title: "Maintenance and Updates",
+      desc: "Continuously update and improve the app."
+
+    },
   ]
   const cardData = [
     {
@@ -54,7 +86,7 @@ const page = () => {
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Mobile Application Development"} subTitle={"Creating captivating and user-friendly mobile applications that engage your audience and enhance your brand presence."} />
         <ServiceBanner banner={SBanner} title={"Seamless Experiences"} description={"Mobile Application Development involves crafting intuitive and feature-rich mobile apps designed to enhance user engagement and provide seamless functionality across all mobile platforms."}/>
-        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-[20px] md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"In our app development process, we begin with thorough discovery and planning phases to understand user needs and market demands. Our design and user experience experts then craft engaging and intuitive interfaces to enhance user interaction. Through development, we code applications for multiple platforms, ensuring broad accessibility. Rigorous testing ensures functionality and performance across all devices before deployment, launching apps in relevant app stores. Our commitment extends post-deployment, as we provide ongoing maintenance and updates to continuously improve the app's performance and user experience."}/>
           <Stage stageData={stageData} elementColor={"#075085"}/>
         </div>

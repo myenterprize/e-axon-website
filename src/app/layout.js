@@ -10,6 +10,10 @@ const poppins = Poppins({
 export const metadata = {
   title: "e-axon",
   description: "Intelligent & Quality solutions for financial, sports & HR industries",
+  icons: {
+    icon: ['/favicon.ico'],
+    apple: ['/apple-touch-icon.png']
+  }
 };
 
 export default function RootLayout({ children }) {

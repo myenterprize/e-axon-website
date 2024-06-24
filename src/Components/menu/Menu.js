@@ -38,9 +38,9 @@ export default function Menu() {
   return (
     <div className="flex flex-wrap">
       <div className="w-full">
-        <nav className="relative flex flex-wrap items-center justify-between border-b-1 border-black border-opacity-[20%] transition-all">
-          <div className="w-full px-[10px] md:px-[67px] mx-auto flex flex-wrap items-center justify-between py-[13px]">
-            <div className="w-full relative flex justify-between items-center lg:w-auto px-4 lg:static lg:block lg:justify-start">
+        <nav className="relative flex flex-wrap items-center justify-between md:border-b-1 md:border-black md:border-opacity-[20%] transition-all">
+          <div className="w-full px-[33px] md:px-[67.5px] mx-auto flex flex-wrap items-center justify-between py-[36px] sm:py-[13px]">
+            <div className="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start">
               <Link
                 className="text-sm font-bold leading-relaxed inline-block whitespace-nowrap uppercase text-white"
                 href="/"
@@ -48,7 +48,7 @@ export default function Menu() {
                 <Image src={exonLogo} alt="e-axon" width={100} height={50} />
               </Link>
               <button
-                className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                className="text-white cursor-pointer text-xl leading-none border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                 type="button"
                 onClick={() => setMenuOpen(!menuOpen)}
               >
@@ -73,7 +73,7 @@ export default function Menu() {
               id="example-navbar-info"
             >
               <ul
-                className={`absolute left-0 top-[77px] transition-all duration-300 ease-in-out w-full sm:block hidden bg-S1-50 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                className={`absolute left-0 top-[77px] z-[99] transition-all duration-300 ease-in-out w-full sm:block hidden bg-S1-50 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
                   }`}
               >
                 <div className="w-full max-w-[1350px] px-[67px] mx-auto lg:py-[13px] sm:flex sm:gap-5 sm:py-[50px] lg:block xl:gap-0 lg:xl-[15px]">
@@ -89,10 +89,10 @@ export default function Menu() {
                   ))}
                 </div>
               </ul>
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-x-8 gap-y-[20px] items-start lg:items-center">
+              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-x-8 gap-y-[25px] items-start lg:items-center">
                 <li className="nav-item relative">
                   <button
-                    className="text-18/25 text-black font-medium focus:outline-none flex items-center gap-x-[12px] xs:hover:border-l-4 hover:text-yellow-color xs:hover:border-yellow-color transition-all duration-100 ease-in-out px-4 py-1 lg:border-none"
+                    className="text-18/25 text-black font-medium focus:outline-none flex items-center gap-x-[12px] xs:hover:border-l-4 hover:text-yellow-color xs:hover:border-yellow-color transition-all duration-100 ease-in-out px-[16px] py-[1.5px] lg:border-none"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                   >
                     Our Services
@@ -102,7 +102,7 @@ export default function Menu() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="text-18/25 text-black font-medium hover:border-l-4 hover:text-yellow-color hover:border-yellow-color transition-all duration-100 ease-in-out px-4 py-1 lg:border-none"
+                    className="text-18/25 text-black font-medium hover:border-l-4 hover:text-yellow-color hover:border-yellow-color transition-all duration-100 ease-in-out px-[16px] py-[1.5px] lg:border-none"
                     href="/work"
                   >
                     Our Work
@@ -110,7 +110,7 @@ export default function Menu() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="text-18/25 text-black font-medium hover:border-l-4 hover:text-yellow-color hover:border-yellow-color transition-all duration-100 ease-in-out px-4 py-1 lg:border-none"
+                    className="text-18/25 text-black font-medium hover:border-l-4 hover:text-yellow-color hover:border-yellow-color transition-all duration-100 ease-in-out px-[16px] py-[1.5px] lg:border-none"
                     href="/who-we-are"
                   >
                     Who We Are
@@ -149,7 +149,7 @@ export default function Menu() {
           {services.map((item, index) => (
             <li key={index} className="w-[100%] flex flex-wrap justify-start items-center">
               {item.row.map((card, i) => (
-                <Link key={i} href={card.link} className="w-[300px] flex justify-start items-center py-3 transition-all duration-300 ease-in-out flex-shrink-0">
+                <Link key={i} href={card.link} className="w-[300px] flex justify-start items-center py-[16px] transition-all duration-300 ease-in-out flex-shrink-0">
                   <p className="text-14/18 font-medium text-wrap">{card.title}</p>
                 </Link>
               ))}

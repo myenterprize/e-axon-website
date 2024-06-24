@@ -7,6 +7,9 @@ import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/architectural-banner.jpg"
 import PlanningImg from '@/assets/svgs/assesment-svg.svg'
+import Guidance from '@/assets/svgs/guidance.svg'
+import Monitering from '@/assets/svgs/monitering.svg'
+import Ongoing from '@/assets/svgs/ongoing.svg' 
 import TestingProcess from '@/assets/svgs/coding-medal.svg'
 import TestImg from '@/assets/svgs/identification-svg.svg'
 import ManualEffort from '@/assets/svgs/data-box.svg'
@@ -31,6 +34,27 @@ const page = () => {
       title: "Identification of Improvements",
       desc: "Recommend enhancements and new technologies."
 
+    },
+    {
+      No: "03",
+      img: Guidance,
+      title: "Implementation Guidance",
+      desc: "Assist in implementing architectural changes."
+
+    },
+    {
+      No: "04",
+      img: Monitering,
+      title: "Performance Monitoring",
+      desc: "Continuously monitor system performance."
+
+    },
+    {
+      No: "05",
+      img: Ongoing,
+      title: "Ongoing Optimization",
+      desc: "Regular updates and optimization."
+
     }
   ]
   const cardData = [
@@ -54,7 +78,7 @@ const page = () => {
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Architectural Review"} subTitle={"Enhancing system architecture for optimal performance and scalability."} />
         <ServiceBanner banner={SBanner} title={"Future-Proofing Software Architecture"} description={"Architectural Review ensures that the software architecture meets current and future technological and business needs, promoting efficient performance and scalability."}/>
-        <div className='texting-section w-full bg-P1-200 pt-[15px] md:pt-[55px] px-[20px] md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <div className='texting-section w-full bg-P1-200 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"In our architectural assessment process, we thoroughly evaluate your current setup, identifying areas for improvement and opportunities for innovation. Our expert team provides recommendations for enhancements and suggests new technologies to align your architecture with business goals. We offer guidance throughout the implementation of architectural changes, ensuring a seamless transition. Continuous performance monitoring allows us to gauge system effectiveness, with ongoing updates and optimization ensuring sustained operational excellence."}/>
           <Stage stageData={stageData} elementColor={"#414267"}/>
         </div>

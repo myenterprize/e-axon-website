@@ -7,6 +7,10 @@ import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/artificial-banner.jpg"
 import PlanningImg from '@/assets/svgs/ai-development.svg'
+import Processing from '@/assets/svgs/natural-processing.svg'
+import Automation from '@/assets/svgs/automation.svg'
+import Monitering from '@/assets/svgs/performance-monitering.svg'
+import Improvement from '@/assets/svgs/improvement.svg'
 import TestingProcess from '@/assets/svgs/distribution-svg.svg'
 import TestImg from '@/assets/svgs/saas-svg.svg'
 import ManualEffort from '@/assets/svgs/growth-svg.svg'
@@ -31,6 +35,34 @@ const page = () => {
       title: "Machine Learning Implementation",
       desc: "Develop and train machine learning models."
 
+    },
+    {
+      No: "03",
+      img: Processing,
+      title: "Natural Language Processing",
+      desc: "Integrate NLP for enhanced user interactions."
+
+    },
+    {
+      No: "04",
+      img: Automation,
+      title: "AI-Powered Automation",
+      desc: "Automate routine tasks to increase efficiency."
+
+    },
+    {
+      No: "05",
+      img: Monitering,
+      title: "Performance Monitoring",
+      desc: "Continuously evaluate the performance of AI implementations."
+
+    },
+    {
+      No: "06",
+      img: Improvement,
+      title: "Iterative Improvement",
+      desc: "Regularly refine AI systems based on performance data."
+
     }
   ]
   const cardData = [
@@ -54,7 +86,7 @@ const page = () => {
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Artificial Intelligence"} subTitle={"Leveraging AI to drive innovation and  enhance business intelligence across operations."} />
         <ServiceBanner banner={SBanner} title={"AI-Powered Innovation"} description={"Artificial Intelligence services focus on integrating AI technologies to automate processes, enhance decision-making, and create new opportunities for innovation and efficiency in businesses."}/>
-        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-[20px] md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"In our AI journey, we begin by crafting a tailored strategy to seamlessly integrate AI into your business model. This involves developing and training machine learning models to optimize processes and drive innovation. Natural Language Processing is then employed to enhance user interactions, while AI-powered automation streamlines operations for increased efficiency. Continuous performance monitoring ensures the effectiveness of AI implementations, with regular refinements based on performance data ensuring ongoing improvement and alignment with business objectives."} textColor={"#3CBCC3"}/>
           <Stage stageData={stageData}/>
         </div>

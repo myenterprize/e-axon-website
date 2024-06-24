@@ -7,6 +7,9 @@ import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/service-banner.jpg"
 import PlanningImg from '@/assets/svgs/planning-svg.svg'
+import Performance from '@/assets/svgs/performance-testing.svg'
+import Security from '@/assets/svgs/security-testing.svg'
+import Reporting from '@/assets/svgs/reporting-feedback.svg'
 import TestingProcess from '@/assets/svgs/testing-process.svg'
 import TestImg from '@/assets/svgs/test-svg.svg'
 import ManualEffort from '@/assets/svgs/manual-effort.svg'
@@ -31,6 +34,27 @@ const page = () => {
       title: "Automated Test Development",
       desc: "We then design and execute automated tests."
 
+    },
+    {
+      No: "03",
+      img: Performance,
+      title: "Performance Testing",
+      desc: "We validate stability and response times."
+
+    },
+    {
+      No: "04",
+      img: Security,
+      title: "Security Testing",
+      desc: "This step is to identify and mitigate vulnerabilities"
+
+    },
+    {
+      No: "05",
+      img: Reporting,
+      title: "Reporting and Feedback",
+      desc: "We aim to provide detailed reports and improvement suggestions."
+
     }
   ]
   const cardData = [
@@ -54,7 +78,7 @@ const page = () => {
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Quality Assurance Testing & Automation"} subTitle={"Maximizing software reliability and operational efficiency through cutting-edge testing and automation techniques."} />
         <ServiceBanner banner={SBanner} title={"Advancing Quality"} description={"Quality Assurance Testing and Automation focuses on ensuring that software products meet the highest standards of quality through systematic testing processes and leveraging automation to increase efficiency and accuracy."}/>
-        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-[20px] md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"Throughout the development lifecycle, our testing process encompasses several key stages, each meticulously designed to ensure the highest standards of quality and reliability. From comprehensive Test Planning to the meticulous execution of Automated Tests, rigorous Performance Testing, thorough Security Testing, and finally, detailed Reporting and Feedback, our approach is geared towards delivering exceptional software solutions that meet and exceed your expectations."}/>
           <Stage stageData={stageData}/>
         </div>
