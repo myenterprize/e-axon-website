@@ -22,7 +22,7 @@ import CallToAction from '@/Components/call-to-action/CallToAction'
 import FooterSection from '@/Components/footer/Footer'
 
 
-const page = () => {
+const ArtificialIntelligence = () => {
   const [image, setImage] = useState(SBanner);
 
 
@@ -105,7 +105,7 @@ const page = () => {
   ]
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto">
+    <div className="w-full mx-auto">
       <Menu />
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Artificial Intelligence"} subTitle={"Leveraging AI to drive innovation and  enhance business intelligence across operations."} />
@@ -127,4 +127,4 @@ const page = () => {
   )
 }
 
-export default page
+export default ArtificialIntelligence;

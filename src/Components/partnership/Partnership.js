@@ -38,7 +38,7 @@ export default function Partnership() {
           <div className="xl:max-w-[426px] w-full xl:px-0 px-[30px]">
             <div className="text-16/22 md:text-24/34 text-black font-[700] mb-[8px] bg-white p-[8px]">Collaborative Partnership</div>
             <div className="text-12/17 md:text-18/25 text-black font-normal mb-[15px] md:mb-[68px] bg-white p-[8px]">Through collaborative partnerships, we tailor solutions from planning to testing, guiding every step.</div>
-            <Button text="Get to know us" link="/" classes="w-[145px] px-[16px] py-[21px]" />
+            <Button text="Get to know us" link="/who-we-are" classes="w-[145px] px-[16px] py-[21px]" />
           </div>
         </div>
       

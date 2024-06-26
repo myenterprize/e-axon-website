@@ -31,7 +31,7 @@ import EdgeWorkMobile from '@/assets/images/work-3-f.png'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-const page = () => {
+const OurWork = () => {
   const logoArray = [
     {
       row: [
@@ -145,7 +145,7 @@ const page = () => {
         <div key={index} className={`flex justify-center items-center gap-x-2 md:gap-x-[20px] lg:gap-x-[55px]`}>
           {logo.row.map((item, i) => (
             <div key={i} className="mb-2 md:mb-[12px] lg:mb-[25px]">
-              <Image className='w-[55px] md:w-[90px] md:h-[90px] h-[55px]' src={item.logo} />
+              <Image className='w-[55px] md:w-[90px] md:h-[90px] h-[55px]' src={item.logo} alt='' />
             </div>
           ))}
         </div>
@@ -153,7 +153,7 @@ const page = () => {
   })
 
   return (
-    <div className="w-full max-w-[1440px] mx-auto">
+    <div className="w-full mx-auto">
     <Menu/>
     <div className="w-full flex flex-col justify-center items-center overflow-x-hidden overflow-y-auto">
       <AboutTitle title={"Selected Projects"} desc={"This showcase features a tiny fraction of the websites we have done for our amazing clients over the years. We include case studies that cover various areas of our expertise in  front-end  and back-end development, and integrations with different platforms."} workClasses={"text-18/25 md:text-47/62 font-extrabold"}/>
@@ -179,17 +179,4 @@ const page = () => {
   )
 }
 
-export default page
-
-
-//  const logoGrid = logoArray.map((logo, index) => {
-//     return (
-//         <div key={index} className={`flex justify-center items-center gap-x-2 md:gap-x-[20px] lg:gap-x-[55px]`}>
-//           {logo.row.map((item, i) => (
-//             <div key={i} className="mb-2 md:mb-[12px] lg:mb-[25px]">
-//               <Image className='w-[55px] md:w-[90px] md:h-[90px] h-[55px]' src={item.logo} />
-//             </div>
-//           ))}
-//         </div>
-//     )
-//   })
+export default OurWork

@@ -13,9 +13,9 @@ import Testimonials from '@/Components/reviews/Testimonials'
 import CallToAction from '@/Components/call-to-action/CallToAction'
 import FooterSection from '@/Components/footer/Footer'
 
-const page = () => {
+const EdgePage = () => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto">
+    <div className="w-full mx-auto">
       <Menu />
       <div className="w-full flex flex-col justify-start items-center mt-0 md:my-53">
         <Brand logo={Edge} title="Edge makes offshore hiring process efficient." />
@@ -41,4 +41,4 @@ const page = () => {
   )
 }
 
-export default page
+export default EdgePage;

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import exonLogo from '@/assets/svgs/logo.svg';
 import menuCloseIcon from '@/assets/svgs/menu-close.svg';
 import arrowDown from '@/assets/svgs/arrow-down.svg';
@@ -17,6 +17,20 @@ import Close from '@/assets/svgs/cross-svg.svg';
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const divRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (divRef.current && !divRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const services = [
     {
@@ -73,7 +87,8 @@ export default function Menu() {
               id="example-navbar-info"
             >
               <ul
-                className={`absolute left-0 top-[77px] z-[99] transition-all duration-300 ease-in-out w-full sm:block hidden bg-S1-50 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                ref={divRef}
+                className={`absolute left-0 top-[77px] z-[99] transition-all duration-300 ease-in-out w-full md:block hidden bg-S1-50 ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
                   }`}
               >
                 <div className="w-full max-w-[1350px] px-[67px] mx-auto lg:py-[13px] sm:flex sm:gap-5 sm:py-[50px] lg:block xl:gap-0 lg:xl-[15px]">
@@ -89,14 +104,14 @@ export default function Menu() {
                   ))}
                 </div>
               </ul>
-              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-x-8 gap-y-[25px] items-start lg:items-center">
-                <li className="nav-item relative">
+              <ul className="flex flex-col lg:flex-row list-none lg:ml-auto gap-x-8 gap-y-[25px] items-start lg:items-center md:w-auto w-full">
+                <li className="nav-item relative md:w-auto w-full">
                   <button
-                    className="text-18/25 text-black font-medium focus:outline-none flex items-center gap-x-[12px] xs:hover:border-l-4 hover:text-yellow-color xs:hover:border-yellow-color transition-all duration-100 ease-in-out px-[16px] py-[1.5px] lg:border-none"
+                    className="text-18/25 text-black font-medium focus:outline-none flex items-center md:justify-normal justify-between gap-x-[12px] xs:hover:border-l-4 hover:text-yellow-color xs:hover:border-yellow-color transition-all duration-100 ease-in-out px-[16px] py-[1.5px] lg:border-none md:w-auto w-full"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                   >
                     Our Services
-                    <Image src={arrowDown} alt="e-axon" />
+                    <Image className="md:rotate-0 -rotate-90" src={arrowDown} alt="e-axon" />
                   </button>
 
                 </li>
@@ -135,7 +150,7 @@ export default function Menu() {
         </nav>
       </div>
       <ul
-        className={`absolute left-0 top-[0px] transition-all duration-300 ease-in-out w-full h-full sm:hidden block bg-white ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`absolute left-0 top-[0px] transition-all duration-300 ease-in-out w-full h-full md:hidden block bg-white ${dropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
       >
         <div className="w-full max-w-[1350px] px-[25px] mx-auto py-[13px] mt-[20px]">
@@ -149,7 +164,7 @@ export default function Menu() {
           {services.map((item, index) => (
             <li key={index} className="w-[100%] flex flex-wrap justify-start items-center">
               {item.row.map((card, i) => (
-                <Link key={i} href={card.link} className="w-[300px] flex justify-start items-center py-[16px] transition-all duration-300 ease-in-out flex-shrink-0">
+                <Link key={i} href={card.link} className="w-[300px] flex justify-start items-center py-[16px] transition-all duration-300 ease-in-out flex-shrink-0 md:w-auto w-full">
                   <p className="text-14/18 font-medium text-wrap">{card.title}</p>
                 </Link>
               ))}

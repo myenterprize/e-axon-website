@@ -12,7 +12,7 @@ import WhatWeDo from "@/Components/what-we-do/WhatWeDo";
 
 export default function Page() {
   return (
-    <div className="w-full max-w-[1440px] mx-auto">
+    <div className="w-full mx-auto">
       <Menu />
       <Banner />
       <TrustedBusiness />

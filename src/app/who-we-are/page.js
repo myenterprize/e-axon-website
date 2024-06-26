@@ -40,7 +40,7 @@ export default function AboutPage() {
   }, []);
 
     return (
-     <div className="w-full max-w-[1440px] mx-auto">
+     <div className="w-full mx-auto">
       <Menu/>
       <div className="w-full flex flex-col justify-center items-center">
         <AboutTitle title={"About Us"} desc={"We are a group of software developers, passionate about code quality and meeting customer’s needs."} classes='font-bold text-28/39 sm:text-34/48  md:text-47/62 md:font-extrabold'/>
