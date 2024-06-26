@@ -132,6 +132,7 @@ module.exports = {
         '12/17': ['12px', '17.04px'],
         '20/28': ['20px', '28.4px'],
         '10/13': ['10px', '13.2px'],
+        '24/32.4': ['24px', '32.4px'],
         // e-axon
         '3xl': ['80px', '80px'],
         xxl: ['57px', '25px'],
@@ -179,6 +180,7 @@ module.exports = {
         'green-color': '#3CBCC3',
         'yellow-color': '#EBA63F',
         'light-gray-color': '#7F7F7F',
+        'light-gray': '#9E9E9E',
         'P2-800': '#075085',
         // e-axon
         'gray-0': '#3e3e3e',

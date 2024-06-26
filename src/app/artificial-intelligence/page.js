@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Menu from '@/Components/menu/Menu'
 import Benefit from '@/Components/services-component/benefit-section/Benefit'
 import ServiceBanner from '@/Components/services-component/service-banner/ServiceBanner'
@@ -6,6 +7,7 @@ import ServiceTitle from '@/Components/services-component/service-title/ServiceT
 import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/artificial-banner.jpg"
+import MBanner from "@/assets/images/mobile-ai.jpg"
 import PlanningImg from '@/assets/svgs/ai-development.svg'
 import Processing from '@/assets/svgs/natural-processing.svg'
 import Automation from '@/assets/svgs/automation.svg'
@@ -20,7 +22,29 @@ import CallToAction from '@/Components/call-to-action/CallToAction'
 import FooterSection from '@/Components/footer/Footer'
 
 
-const page = () => {
+const ArtificialIntelligence = () => {
+  const [image, setImage] = useState(SBanner);
+
+
+  useEffect(() => {
+    const updateImage = () => {
+      if (window.innerWidth < 1024) {
+        setImage(MBanner);
+     
+      } else {
+        setImage(SBanner);
+      
+      }
+    };
+
+    updateImage(); // Set the initial background image
+    window.addEventListener('resize', updateImage);
+
+    return () => {
+      window.removeEventListener('resize', updateImage);
+    };
+  }, []);
+
   const stageData = [
     {
       No: "01",
@@ -81,16 +105,16 @@ const page = () => {
   ]
 
   return (
-    <>
+    <div className="w-full mx-auto">
       <Menu />
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Artificial Intelligence"} subTitle={"Leveraging AI to drive innovation and  enhance business intelligence across operations."} />
-        <ServiceBanner banner={SBanner} title={"AI-Powered Innovation"} description={"Artificial Intelligence services focus on integrating AI technologies to automate processes, enhance decision-making, and create new opportunities for innovation and efficiency in businesses."}/>
-        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <ServiceBanner banner={image} title={"AI-Powered Innovation"} description={"Artificial Intelligence services focus on integrating AI technologies to automate processes, enhance decision-making, and create new opportunities for innovation and efficiency in businesses."}/>
+        <div className='texting-section w-full h-auto md:h-[960px] bg-S1-50 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"In our AI journey, we begin by crafting a tailored strategy to seamlessly integrate AI into your business model. This involves developing and training machine learning models to optimize processes and drive innovation. Natural Language Processing is then employed to enhance user interactions, while AI-powered automation streamlines operations for increased efficiency. Continuous performance monitoring ensures the effectiveness of AI implementations, with regular refinements based on performance data ensuring ongoing improvement and alignment with business objectives."} textColor={"#3CBCC3"}/>
           <Stage stageData={stageData}/>
         </div>
-        <div className="benefit-section w-full pt-16 flex justify-center items-center px-[20px]">
+        <div className="benefit-section w-full pt-[112px] md:pt-[164px] flex justify-center items-center px-[20px]">
           <Benefit cardData={cardData}/>
         </div>
         <div className="results w-full flex justify-center md:justify-end items-center px-[20px]">
@@ -99,8 +123,8 @@ const page = () => {
         <CallToAction/>
       </div>
       <FooterSection/>
-    </>
+    </div>
   )
 }
 
-export default page
+export default ArtificialIntelligence;

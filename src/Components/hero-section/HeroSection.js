@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const HeroSection = ({heroImage, aboutText, industry, companySize, Year}) => {
   return (
-    <div className='w-full max-w-[813px] mt-[22px] mb-[36px] lg:mb-[176px] relative px-[15px]'>
+    <div className='w-full max-w-[813px] mt-[22px] mb-[36px] lg:mb-[176px] relative px-[20px]'>
       <Image src={heroImage} alt='hero banner' style={{width: "100%"}}/>
       <div className="company-details w-full h-[90px] px-5 py-5 md:max-w-[380px] lg:w-[403px] lg:h-[124px] bg-S1-50 text-center border-1 border-blue-150 border-opacity-50 rounded-[8px] text-blue-color relative bottom-[45px] md:absolute md:bottom-[210px]  md:left-[25%] md:z-20  lg:bottom-[-30px] lg:left-[-92px] drop-shadow-lg">
         <table className='w-full h-full'>

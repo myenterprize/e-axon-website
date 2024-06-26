@@ -10,9 +10,9 @@ const ResultSection = ({resultTitle, rtColor, percentage1, prograsstext1, percen
 
   return (
     <div className='w-full md:w-[80%] pt-20 flex flex-col justify-center items-center md:items-start'>
-      <p className='text-9/12 md:text-16/22 font-normal text-white bg-P2-900 px-[12px] py-[8px] inline-block rounded-[3px] mb-0 md:mb-[50px]' style={{backgroundColor: rtColor}}>{resultTitle}</p>
-      <div className="rating-list w-full py-10 flex flex-row md:flex-col items-start md:items-end">
-        <Rating percentage={percentage1} text={prograsstext1} classes="text-start pe-[30px]" lineColor={ratingColor} ratingBorder={leftBorder} ratingTitle={paraWidth}/>
+      <p className='text-9/12 md:text-16/22 font-normal text-white bg-P2-900 px-[12px] py-[8px] inline-block rounded-[3px] mb-[30px] md:mb-[50px]' style={{backgroundColor: rtColor}}>{resultTitle}</p>
+      <div className="rating-list w-full pb-10 flex flex-row md:flex-col items-start md:items-end me-[30px] md:me-0">
+        <Rating percentage={percentage1} text={prograsstext1} classes="text-end pe-[35px] items-end" lineColor={ratingColor} ratingBorder={leftBorder} ratingTitle={paraWidth}/>
         <Image className='me-5 block md:hidden' src={MobileLine} alt='mobile line' />
         <Rating ratingWidth={"80%"} percentage={percentage2} text={prograsstext2} classes="text-start" lineColor={ratingColor} ratingBorder={leftBorder}/>
       </div>

@@ -55,17 +55,17 @@ export default function WhatWeDo() {
     
   ]
   return (
-    <div className="flex mb-[161px]">
+    <div className="flex mb-[98px] md:mb-[161px]">
       <div className="w-full max-w-[1130px] mx-auto flex flex-col justify-between">
-        <div className="text-34/48 text-[#000000] font-[800] flex justify-left p-[8px] mb-[42px]">What we do</div>
+        <div className="text-20/28 md:text-34/48 text-[#000000] font-[700] md:font-[800] flex md:justify-start justify-center p-[8px] mb-[22px] md:mb-[42px]">What we do</div>
 
         {whatWeDoList.map((item, index) => (
-          <div key={index} className={`bg-F9-10 rounded-[8px] p-[28px] flex md:flex-row flex-col justify-between ${index !== 0 && 'pt-[3px]'}`}>
+          <div key={index} className={`bg-F9-10 rounded-[8px] mx-[22px] md:mx-0 md:px-[28px] md:py-[28px] flex md:flex-row flex-col justify-between ${index !== 0 && 'pt-[3px]'}`}>
             {item.itemObject.map((item, index) => (
-              <div key={index} className="w-full md:w-[471px] p-[14px]">
-                <div className="pb-[15px] border-b-2 border-[#3CBCC3] border-opacity-[87%] mb-[15px]"><Image src={item.icon} alt="Quality Assurance Testing & Automation" /></div>
-                <div className="text-24/34 text-black font-[700] p-[8px] mb-[15px]">{item.title}</div>
-                <div className="text-16/22 text-black p-[8px]">{item.desc}</div>
+              <div key={index} className="w-full md:w-[471px] p-[14px] mb-[24px] last:mb-0 md:mb-0">
+                <div className="pb-[12px] border-b-2 border-[#3CBCC3] border-opacity-[87%] mb-[12px]"><Image src={item.icon} alt="Quality Assurance Testing & Automation" /></div>
+                <div className="text-16/22 md:text-24/34 text-black font-[700] p-[8px] mb-[12px]">{item.title}</div>
+                <div className="text-12/17 md:text-16/22 text-black p-[8px]">{item.desc}</div>
               </div>
             ))}
           </div>
