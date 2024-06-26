@@ -103,7 +103,7 @@ export default function Menu() {
                 <li className="nav-item">
                   <Link
                     className="text-18/25 text-black font-medium hover:border-l-4 hover:text-yellow-color hover:border-yellow-color transition-all duration-100 ease-in-out px-[16px] py-[1.5px] lg:border-none"
-                    href="/work"
+                    href="/our-work"
                   >
                     Our Work
                   </Link>

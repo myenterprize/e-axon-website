@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Menu from '@/Components/menu/Menu'
 import Benefit from '@/Components/services-component/benefit-section/Benefit'
@@ -20,6 +21,7 @@ import FooterSection from '@/Components/footer/Footer'
 
 
 const page = () => {
+
   const stageData = [
     {
       No: "01",
@@ -73,16 +75,16 @@ const page = () => {
   ]
 
   return (
-    <>
+    <div className="w-full max-w-[1440px] mx-auto">
       <Menu />
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Quality Assurance Testing & Automation"} subTitle={"Maximizing software reliability and operational efficiency through cutting-edge testing and automation techniques."} />
         <ServiceBanner banner={SBanner} title={"Advancing Quality"} description={"Quality Assurance Testing and Automation focuses on ensuring that software products meet the highest standards of quality through systematic testing processes and leveraging automation to increase efficiency and accuracy."}/>
-        <div className='texting-section w-full bg-S1-50 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <div className='texting-section w-full h-auto md:h-[960px] bg-S1-50 pt-[15px] md:pt-[75px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"Throughout the development lifecycle, our testing process encompasses several key stages, each meticulously designed to ensure the highest standards of quality and reliability. From comprehensive Test Planning to the meticulous execution of Automated Tests, rigorous Performance Testing, thorough Security Testing, and finally, detailed Reporting and Feedback, our approach is geared towards delivering exceptional software solutions that meet and exceed your expectations."}/>
           <Stage stageData={stageData}/>
         </div>
-        <div className="benefit-section w-full pt-16 flex justify-center items-center px-[20px]">
+        <div className="benefit-section w-full pt-[112px] md:pt-[164px] flex justify-center items-center px-[20px]">
           <Benefit cardData={cardData}/>
         </div>
         <div className="results w-full flex justify-center md:justify-end items-center px-[20px]">
@@ -91,7 +93,7 @@ const page = () => {
         <CallToAction/>
       </div>
       <FooterSection/>
-    </>
+    </div>
   )
 }
 

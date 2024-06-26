@@ -7,12 +7,13 @@ import MarqueeEffect from '../marquee-section/MarqueeEffect'
 
 
 const WorkStudy = ({isLeftBox, workImage, cardTitle, cardDesc, cardColor, cardPath, classes}) => {
+ //for image width: w-[240px] md:w-[500px] lg:w-[700px] xl:w-[850px]
 
   return (
-    <div className='relative px-[20px] py-[30px] lg:py-[110px] lg:px-[180px] z-10 lg:overflow-hidden'>
-      <Image className={`w-[240px] md:w-[500px] lg:w-[700px] xl:w-[850px] object-cover ${classes}`} src={workImage} />
-      <Image className={`w-[200px] h-auto md:w-[300px] lg:w-[458px] lg:h-[257px] absolute bottom-16 md:bottom-32 lg:bottom-52 z-[-1] ${isLeftBox ? "left-0":"right-0"}`} src={BridgingBg}/>
-      <div className={`work-content w-[190px] md:w-[270px] lg:w-[340px] absolute ${isLeftBox ? "left-0" : "right-0"} bottom-[-50px] md:bottom-[-30px] lg:bottom-14 bg-S1-400 px-[20px] pt-[20px] pb-[14px] rounded-[8px] shadow-xs10`} style={{backgroundColor: cardColor}}>
+    <div className='relative py-[30px] lg:py-[110px] lg:my-[50px] lg:mb-[80px] lg:pr-[180px] lg:pl-[200px] z-10 lg:overflow-hidden'>
+      <Image className={`w-[100%] object-cover ${classes}`} src={workImage} />
+      <Image className={`w-[200px] h-auto hidden md:block md:w-[300px] lg:w-[458px] lg:h-[257px] absolute bottom-16 md:bottom-32 lg:bottom-60 z-[-1] ${isLeftBox ? "left-0":"right-0"}`} src={BridgingBg}/>
+      <div className={`work-content w-[220px] md:w-[270px] lg:w-[340px] absolute ${isLeftBox ? "left-[25px] md:left-0" : "right-0"} bottom-[-30px] md:bottom-[-30px] lg:bottom-14 bg-S1-400 px-[20px] pt-[20px] pb-[14px] rounded-[8px] shadow-xs10 right-[25px] md:right-0`} style={{backgroundColor: cardColor}}>
         <h6 className='text-12/15 md:text-18/25 text-white font-bold mb-1'>{cardTitle}</h6>
         <p className='text-9/12 md:text-12/15 text-white font-normal'>{cardDesc}</p>
         <Link href={cardPath} className='w-full text-10/13 md:text-14/18 text-white font-normal inline-block mt-[15px] md:mt-[32px] text-end pt-[8px] md:pt-[17px] border-t-[1px]'>

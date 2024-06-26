@@ -45,11 +45,11 @@ export default function FooterSection() {
   // };
   
   return (
-    <div className="flex bg-P2-900 py-[55px]">
+    <div className="flex bg-P2-900 py-[55px] px-[30px]">
       <div
-        className="w-full max-w-[1071px] mx-auto flex md:flex-row flex-col justify-between items-start"
+        className="w-full max-w-[1071px] mx-auto flex md:flex-row  flex-col-reverse justify-between items-start"
       >
-        <div className="xl:w-[283px] w-full p-[8px]">
+        <div className="xl:w-[283px] w-full p-[8px] hidden md:block">
           <div className="p-[2px] text-white text-18/25 font-[700] pb-[11px] border-b-1 border-[#3CBCC3] border-opacity-[24%] mb-[36px]">Service</div>
           <div>
             {serviceLinks.map((item, index) => (
@@ -77,13 +77,28 @@ export default function FooterSection() {
              </div>))}
           </div>
         </div>
+        <div className="xl:w-[283px] w-full py-[35px] px-[8px] md:p-[8px] block md:hidden">
+          <div className="p-[2px] text-white text-18/25 font-[700] pb-[11px] border-b-1 border-[#3CBCC3] border-opacity-[24%] mb-[36px]">Service</div>
+          <div>
+            {serviceLinks.map((item, index) => (
+              <Link
+                className={`text-[14px] leading-[19.04px] text-green-color mb-[16px] block ${robotoFont}`}
+                href={item.link}
+                key={index}
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+          </div>
+        </div>
         <div className="xl:w-[359px] w-full p-[8px]">
           <div className="p-[2px] text-white text-18/25 font-[700] pb-[11px] border-b-1 border-[#3CBCC3] border-opacity-[24%] mb-[36px]">e-axon</div>
           <div className='flex flex-col justify-between items-start'>
             <p className={`text-16/22 font-medium text-green-color mb-[25px] ${robotoFont}`}>Our Family</p>
             <p className={`text-14/18 font-normal text-white ${robotoFont}`}>A group of software developers , passionate about code quality and meeting customer’s needs.
             We have devised our own lean methodology, based on trust, openness, and flat a hierarchy.</p>
-            <div className='flex gap-3 mt-[100px]'>
+            <div className='flex gap-3 mt-[30px] md:mt-[100px]'>
               <Link href={'/'}>
               <Image src={LinkdeIn} alt='social' /></Link>
               <Link href={'/'}>

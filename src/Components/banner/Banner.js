@@ -16,13 +16,14 @@ import BannerLableMob5 from '@/assets/images/banner/mobile/banner-lable-mob-5.pn
 import Image from "next/image";
 import Button from "../button/Button";
 
+
 export default function Banner() {
   return (
     <div className="flex">
       <div className="w-full xl:flex-row flex-col xl:pl-[180px] xl:pr-0 xl:ml-auto flex xl:items-start justify-between pb-[45px]">
-          <div className="flex flex-col xl:max-w-[505px] w-full max-w-full mt-[64px] md:pl-[67px] md:pr-[67px] pr-[0px] pl-[0px] xl:pr-0 xl:pl-0">
-            <div className="md:text-47/62 text-24/32.4 text-blue-color font-[800] w-full xl:max-w-[400px] max-w-full mb-[42px] xl:pr-3 md:px-0 px-[38px]">Unlock the potential of your <span className="text-green-color">digital journey</span> with innovation</div>
-            <div className="mt-[36px] md:hidden flex justify-end banner-container">
+          <div className="flex flex-col xl:max-w-[505px] w-full max-w-full mt-[21px] md:mt-[70px] md:pl-[67px] md:pr-[67px] pr-[0px] pl-[0px] xl:pr-0 xl:pl-0">
+            <div className="md:text-47/62 text-24/32.4 text-blue-color font-[800] w-full xl:max-w-[400px] max-w-full mb-[21px] xl:pr-3 md:px-0 px-[30px]">Unlock the potential of your <span className="text-green-color">digital journey</span> with innovation</div>
+            <div className="mt-[20px] md:hidden flex justify-end banner-container">
               <Image src={mainBanner} alt="e-axon" />
               <div className="lable1"><Image src={BannerLableMob1} alt="e-axon" /></div>
               <div className="lable2"><Image src={BannerLableMob2} alt="e-axon" /></div>

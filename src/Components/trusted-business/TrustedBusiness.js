@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function TrustedBusiness() {
   return (
     <div className="flex">
-      <div className="w-full xl:flex-row flex-col max-w-full xl:pl-[180px] ml-auto flex items-center justify-between pb-[176px]">
+      <div className="w-full xl:flex-row flex-col max-w-full xl:pl-[180px] ml-auto flex items-center justify-between pb-[100px] md:pb-[170px] xl:pb-[176px]">
           <div className="flex flex-col max-w-[505px]">
             <div className="md:text-18/25 text-12/17 text-black font-normal xl:mb-0 mb-[14px]">We are the trusted choice of  many businesses</div>
           </div>

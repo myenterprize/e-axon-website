@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Menu from '@/Components/menu/Menu'
 import Benefit from '@/Components/services-component/benefit-section/Benefit'
 import ServiceBanner from '@/Components/services-component/service-banner/ServiceBanner'
@@ -6,6 +7,7 @@ import ServiceTitle from '@/Components/services-component/service-title/ServiceT
 import Stage from '@/Components/services-component/test-stage/Stage'
 import TStages from '@/Components/services-component/texting-stages/TStages'
 import SBanner from "@/assets/images/application-banner.jpg"
+import MBanner from "@/assets/images/application.jpg"
 import PlanningImg from '@/assets/svgs/initial-svg.svg'
 import Implementation from '@/assets/svgs/implementation.svg'
 import Validation from '@/assets/svgs/validation.svg'
@@ -21,6 +23,27 @@ import FooterSection from '@/Components/footer/Footer'
 
 
 const page = () => {
+  const [image, setImage] = useState(SBanner);
+
+
+  useEffect(() => {
+    const updateImage = () => {
+      if (window.innerWidth < 1024) {
+        setImage(MBanner);
+     
+      } else {
+        setImage(SBanner);
+      
+      }
+    };
+
+    updateImage(); // Set the initial background image
+    window.addEventListener('resize', updateImage);
+
+    return () => {
+      window.removeEventListener('resize', updateImage);
+    };
+  }, []);
   const stageData = [
     {
       No: "01",
@@ -82,16 +105,16 @@ const page = () => {
   ]
 
   return (
-    <>
+    <div className="w-full max-w-[1440px] mx-auto">
       <Menu />
       <div className="w-full flex flex-col justify-center items-center">
         <ServiceTitle title={"Application And Infrastructure Modernization"} subTitle={"Revitalizing legacy systems to meet contemporary business demands and technological advancements."} />
-        <ServiceBanner banner={SBanner} title={"Revitalizing IT Infrastructure"} description={"Application and Infrastructure Modernization involves updating and enhancing older systems and technologies to improve performance, reduce costs, and ensure compatibility with new applications and data frameworks."}/>
-        <div className='texting-section w-full bg-FAE1-200 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
+        <ServiceBanner banner={image} title={"Revitalizing IT Infrastructure"} description={"Application and Infrastructure Modernization involves updating and enhancing older systems and technologies to improve performance, reduce costs, and ensure compatibility with new applications and data frameworks."}/>
+        <div className='texting-section w-full h-auto md:h-[960px] bg-FAE1-200 pt-[15px] md:pt-[55px] px-0 md:px-[50px] lg:px-[150px] flex flex-col md:flex-row justify-between items-start mt-[65px] md:mt-[80px] lg:mt-0'>
           <TStages description={"Our initial assessment begins with a comprehensive analysis of your existing applications and infrastructure, identifying areas for improvement. We then embark on strategic planning to map out the modernization process, ensuring alignment with your business objectives. Through meticulous implementation, we upgrade systems and seamlessly integrate new technologies, followed by rigorous testing and validation to ensure full operational capabilities. Our commitment extends beyond implementation, as we provide continuous support and future upgrades to optimize performance and maintain efficiency."}/>
           <Stage stageData={stageData} elementColor={"#0B3E66"}/>
         </div>
-        <div className="benefit-section w-full pt-16 flex justify-center items-center px-[20px]">
+        <div className="benefit-section w-full pt-[112px] md:pt-[164px] flex justify-center items-center px-[20px]">
           <Benefit cardData={cardData} cardWidth={"350px"}/>
         </div>
         <div className="results w-full flex justify-center md:justify-end items-center px-[20px]">
@@ -100,7 +123,7 @@ const page = () => {
         <CallToAction/>
       </div>
       <FooterSection/>
-    </>
+    </div>
   )
 }
 

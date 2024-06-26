@@ -45,24 +45,26 @@ const Skills = () => {
   })
 
   return (
-    <div className='w-full h-auto lg:max-w-[1062px] flex flex-col lg:flex-row justify-between items-center px-[15px] md:px-20 lg:px-[15px] lg:p-3 my-20'>
+    <div className='w-full h-auto lg:max-w-[1062px] flex flex-col lg:flex-row justify-between items-center px-[30px] md:px-20 lg:px-[15px] lg:p-3 my-[80px] md:my-[120px] '>
       <div className="chellange w-full lg:w-[40%]">
         <h3 className='text-16/22 md:text-24/34 font-semibold text-blue-color pb-[8px] lg:pb-8 border-b-2 border-blue-150'>Challenge</h3>
-         <div className="list mt-8 text-12/15 md:text-18/25 font-normal">
-         <p>• Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+         <div className="list mt-8 text-12/15 md:text-18/25 font-normal pl-[20px]">
+         <p className='relative before:content-["•"] before:absolute before:left-[-15px] before:top-0  text-12/15 md:text-18/25 font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
          <br/>
-          <p>• sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <br/>
-          <p>• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <br/>
-          <p>• Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <br/>
+         <p className='relative before:content-["•"] before:absolute before:left-[-15px] before:top-0  text-12/15 md:text-18/25 font-normal'>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+         <br/>
+         <p className='relative before:content-["•"] before:absolute before:left-[-15px] before:top-0  text-12/15 md:text-18/25 font-normal'>
+         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+         <br/>
+         <p className='relative before:content-["•"] before:absolute before:left-[-15px] before:top-0  text-12/15 md:text-18/25 font-normal'>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+         <br/>
+         <br/>
          </div>
       </div>
       <Image className='hidden lg:block' src={VerticalLine} alt='Vertical line'/>
-      <div className="skill w-full mt-10 md:mt-0 lg:w-[40%]">
+      <div className="skill w-full mt-14 md:mt-0 lg:w-[40%]">
         <h3 className='text-16/22 md:text-24/34 font-semibold text-blue-color pb-[8px] lg:pb-8 border-b-2 border-blue-150'>What we did</h3>
-        <ul className='skill-list mt-8 md:grid md:grid-cols-2 md:items-center lg:block'>
+        <ul className='skill-list mt-8 md:grid md:grid-cols-2 md:items-center lg:block '>
           {serviceItem}
         </ul>
       </div>

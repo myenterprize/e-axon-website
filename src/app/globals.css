@@ -27,6 +27,20 @@ body {
 .banner-container {
   position: relative;
 }
+.currency-background{
+  background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 5px, transparent 5px) 0% 0%/8px 8px no-repeat,
+  radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 5px, transparent 5px) 100% 0%/8px 8px no-repeat,
+  radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 5px, transparent 5px) 0% 100%/8px 8px no-repeat,
+  radial-gradient(circle at 0 0, #ffffff 0, #ffffff 5px, transparent 5px) 100% 100%/8px 8px no-repeat,
+  linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 6px) calc(100% - 16px) no-repeat,
+  linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 6px) no-repeat,
+  linear-gradient(20deg, transparent 0%, #B6EAEB 100%),
+  linear-gradient(89deg, transparent 0%, #bae1fd 100%),
+  #075085;
+border-radius: 8px;
+padding: 7px;
+box-sizing: border-box;
+}
 
 .lable1, .lable2, .lable3, .lable4, .lable5 {
   position: absolute;
@@ -240,7 +254,7 @@ body {
 }
 
 
-@media only screen and (min-width: 320px) {
+@media (min-width: 720px) and (max-width: 828px) {
   .lable1 {
     right: 7%;
     animation: moveLable1 2s infinite alternate;
@@ -289,6 +303,63 @@ body {
   @keyframes moveLable5 {
     0% { top: 340px; }
     100% { top: 360px; }
+  }
+
+  .count-mob {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+@media (min-width: 320px) and (max-width: 720px) {
+  .lable1 {
+    right: 17%;
+    animation: moveLable1 2s infinite alternate;
+  }
+  
+  .lable2 {
+    right: 60%;
+    animation: moveLable2 2s infinite alternate;
+  }
+  
+  .lable3 {
+    right: 26%;
+    animation: moveLable3 2s infinite alternate;
+  }
+  
+  .lable4 {
+    right: 40%;
+    animation: moveLable4 2s infinite alternate;
+  }
+  
+  .lable5 {
+    right: 10%;
+    animation: moveLable5 2s infinite alternate;
+  }
+  
+  @keyframes moveLable1 {
+    0% { top: 0px; }
+    100% { top: 20px; }
+  }
+  
+  @keyframes moveLable2 {
+    0% { top: 30px; }
+    100% { top: 50px; }
+  }
+  
+  @keyframes moveLable3 {
+    0% { top: 70px; }
+    100% { top: 90px; }
+  }
+  
+  @keyframes moveLable4 {
+    0% { top: 115px; }
+    100% { top: 135px; }
+  }
+  
+  @keyframes moveLable5 {
+    0% { top: 150px; }
+    100% { top: 170px; }
   }
 
   .count-mob {
